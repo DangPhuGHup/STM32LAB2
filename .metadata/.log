@@ -1,0 +1,37 @@
+!SESSION 2024-09-18 15:35:04.589 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-18 15:35:26.930
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-18 15:35:26.930
+!MESSAGE Log4j2 initialized with config file D:\LAB VXL\GIT_LAB2\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-18 15:35:31.801
+!MESSAGE Started RMI Server, listening on port 41338
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-18 15:38:42.289
+!MESSAGE Indexed 'LAB_2' (17 sources, 78 headers) in 5.64 sec: 3,632 declarations; 13,133 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
+!SESSION 2024-09-24 21:22:15.563 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  D:\LAB VXL\GIT_LAB2\LAB_2\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 D:\LAB VXL\GIT_LAB2\LAB_2\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-24 21:22:41.348
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-24 21:22:41.348
+!MESSAGE Log4j2 initialized with config file D:\LAB VXL\GIT_LAB2\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-24 21:22:50.332
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-24 21:22:54.427
+!MESSAGE Indexed 'LAB_2' (17 sources, 104 headers) in 3.92 sec: 6,977 declarations; 24,608 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0.59%)
