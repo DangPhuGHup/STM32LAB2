@@ -13,8 +13,8 @@ int timer4_counter = 0;
 int timer5_counter = 0;
 int timer6_counter = 0;
 int timerDOT_counter = 0;
-//int timer_SEG1_counter = 0;
-//int timer_SEG2_counter = 0;
+int timerUpdateSEG7_counter = 0;
+
 int timer1_flag = 0;
 int timer2_flag = 0;
 int timer3_flag = 0;
@@ -22,8 +22,8 @@ int timer4_flag = 0;
 int timer5_flag = 1;
 int timer6_flag = 0;
 int timerDOT_flag = 1;
-//int timer_SEG1_flag = 0;
-//int timer_SEG2_flag = 0;
+int updateSEG7_flag = 0;
+
 
 
 void setTimer1(int duration)
@@ -61,11 +61,11 @@ void setTimerDOT(int duration)
 	timerDOT_counter = duration;
 	timerDOT_flag = 0;
 }
-//void setTimer_SEG1(int duration)
-//{
-//	timer_SEG1_flag = duration;
-//
-//}
+void setTimerUpdateSEG7(int duration)
+{
+	timerUpdateSEG7_counter = duration;
+	updateSEG7_flag = 0;
+}
 void timerRun()
 {
 	if(timer1_counter > 0)
@@ -123,6 +123,14 @@ void timerRun()
 		if(timerDOT_counter <= 0)
 		{
 			timerDOT_flag = 1;
+		}
+	}
+	if(timerUpdateSEG7_counter > 0)
+	{
+		timerUpdateSEG7_counter--;
+		if(timerUpdateSEG7_counter <= 0)
+		{
+			updateSEG7_flag = 1;
 		}
 	}
 }
