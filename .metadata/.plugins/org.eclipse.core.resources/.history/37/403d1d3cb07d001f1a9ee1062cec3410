@@ -102,21 +102,8 @@ int main(void)
 //  setTimer5(150);
 //  setTimer6(150);
 //  setTimerDOT(100);
-//  setTimerUpdateSEG7(100);
-//  int index = 0;
-  int hour = 15, minute = 8, second = 50;
-  void updateClockBuffer()
-  {
-	  int a = hour;
-	  int b = hour;
-	  int c = minute;
-	  int d = minute;
-	  led_buffer[0] = a / 10;
-	  led_buffer[1] = b % 10;
-	  led_buffer[2] = c / 10;
-	  led_buffer[3] = d % 10;
-
-  }
+  setTimerUpdateSEG7(100);
+  int index = 0;
   while (1)
   {
     /* USER CODE END WHILE */
@@ -143,33 +130,21 @@ int main(void)
 //    	  print_SEG7(0);
 //      }
 
-//      if(timerDOT_flag == 1)
-//      {
-//    	  setTimerDOT(100);
-//    	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-//      }
-//      if(updateSEG7_flag == 1)
-//      {
-//    	  setTimerUpdateSEG7(100);
-//    	  update7SEG(index++);
-//    	  if(index >= 4)
-//    	  {
-//    		  index = 0;
-//    	  }
-//      }
-//  }
-	  second++;
-	  if (second >= 60){
-		  second = 0;
-		  minute++;
-	  }
-	  if(minute >= 60){
-		  minute = 0;
-		  hour++;
-	  }
-	  if(hour >=24){
-		  hour = 0;
-	  }
+      if(timerDOT_flag == 1)
+      {
+    	  setTimerDOT(100);
+    	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+      }
+      if(updateSEG7_flag == 1)
+      {
+    	  setTimerUpdateSEG7(100);
+    	  update7SEG(index++);
+    	  if(index >= 4)
+    	  {
+    		  index = 0;
+    	  }
+      }
+  }
   /* USER CODE END 3 */
 }
 
