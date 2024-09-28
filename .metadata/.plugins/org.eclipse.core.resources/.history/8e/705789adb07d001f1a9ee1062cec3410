@@ -103,9 +103,8 @@ int main(void)
 //  setTimer6(150);
 //  setTimerDOT(100);
 //  setTimerUpdateSEG7(100);
-  int index = 0;
-
-  int hour = 15, minute = 9, second = 50;
+//  int index = 0;
+  int hour = 15, minute = 8, second = 50;
   void updateClockBuffer()
   {
 	  int a = hour;
@@ -171,15 +170,6 @@ int main(void)
 	  if(hour >=24){
 		  hour = 0;
 	  }
-	  updateClockBuffer();
-	  update7SEG(index);
-	  index++;
-	  if(index >= 4)
-	  {
-	      index = 0;
-	  }
-	  HAL_Delay(1000);
-  }
   /* USER CODE END 3 */
 }
 

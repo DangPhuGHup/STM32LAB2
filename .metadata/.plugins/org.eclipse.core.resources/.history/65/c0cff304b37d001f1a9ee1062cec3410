@@ -174,7 +174,7 @@ int main(void)
 	  updateClockBuffer();
 	  update7SEG(index);
 	  index++;
-	  if(index >= 4)
+	  if(index >= 3)
 	  {
 	      index = 0;
 	  }
