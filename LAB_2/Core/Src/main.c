@@ -17,12 +17,11 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "software_timer.h"
-#include "SEG7.h"
+#include "LED_MATRIX.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,107 +94,19 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-//  setTimer1(100);
-//  setTimer2(150);
-//  setTimer3(150);
-//  setTimer4(100);
-//  setTimer5(150);
-//  setTimer6(150);
-  setTimerDOT(100);
-  setTimerUpdateSEG7(100);
+  setTimermatrix(20);
   int index = 0;
-
-  int hour = 15, minute = 9, second = 50;
-  void updateClockBuffer()
-  {
-	  int a = hour;
-	  int b = hour;
-	  int c = minute;
-	  int d = minute;
-	  led_buffer[0] = a / 10;
-	  led_buffer[1] = b % 10;
-	  led_buffer[2] = c / 10;
-	  led_buffer[3] = d % 10;
-
-  }
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-
-//      if(timer4_flag == 1)
-//      {
-//    	  setTimer4(150);
-//    	  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, GPIO_PIN_SET);
-//    	  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, GPIO_PIN_SET);
-//      }
-//      if(timer5_flag == 1)
-//      {
-//    	  setTimer5(300);
-//    	  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, GPIO_PIN_RESET);
-//    	  print_SEG7(3);
-//      }
-//      if(timer6_flag == 1)
-//      {
-//    	  setTimer6(300);
-//    	  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, GPIO_PIN_RESET);
-//    	  print_SEG7(0);
-//      }
-
-      if(timerDOT_flag == 1)
-      {
-    	  setTimerDOT(100);
-    	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-      }
-
-      if(updateSEG7_flag == 1)
-      {
-    	  setTimerUpdateSEG7(100);
-    	  second++;
-    	  	  if (second >= 60){
-    	  		  second = 0;
-    	  		  minute++;
-    	  	  }
-    	  	  if(minute >= 60){
-    	  		  minute = 0;
-    	  		  hour++;
-    	  	  }
-    	  	  if(hour >=24){
-    	  		  hour = 0;
-    	  	  }
-    	  	 updateClockBuffer();
-    	  update7SEG(index++);
-    	  if(index >= 4)
-    	  {
-    		  index = 0;
-    	  }
-      }
-
-
-
-
-//	  second++;
-//	  if (second >= 60){
-//		  second = 0;
-//		  minute++;
-//	  }
-//	  if(minute >= 60){
-//		  minute = 0;
-//		  hour++;
-//	  }
-//	  if(hour >=24){
-//		  hour = 0;
-//	  }
-//	  updateClockBuffer();
-//	  update7SEG(index);
-//	  index++;
-//	  if(index >= 4)
-//	  {
-//	      index = 0;
-//	  }
-//	  HAL_Delay(1000);
+    if(timermatrix_flag == 1)
+    {
+    	setTimermatrix(20);
+    	updateLEDMatrix(index++);
+    	if(index >= 8) index = 0;
+    }
   }
   /* USER CODE END 3 */
 }

@@ -1,0 +1,11 @@
+/*
+ * LED_MATRIX.c
+ *
+ *  Created on: Oct 1, 2024
+ *      Author: Admin
+ */
+
+#include "LED_MATRIX.h"
+
+int index_led_matrix = 0;
+uint8_t matrix_buffer[8] = {0x18, 0x3C, 0x66, 0x66, 0x7E, 0x7E, 0x66, 0x66};
