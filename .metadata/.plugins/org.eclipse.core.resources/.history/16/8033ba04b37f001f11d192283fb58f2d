@@ -101,7 +101,7 @@ int main(void)
 //  setTimer4(100);
 //  setTimer5(150);
 //  setTimer6(150);
-  setTimerDOT(100);
+//  setTimerDOT(100);
   setTimerUpdateSEG7(100);
   int index = 0;
 
@@ -144,11 +144,11 @@ int main(void)
 //    	  print_SEG7(0);
 //      }
 
-      if(timerDOT_flag == 1)
-      {
-    	  setTimerDOT(100);
-    	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-      }
+//      if(timerDOT_flag == 1)
+//      {
+//    	  setTimerDOT(100);
+//    	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+//      }
 
       if(updateSEG7_flag == 1)
       {
