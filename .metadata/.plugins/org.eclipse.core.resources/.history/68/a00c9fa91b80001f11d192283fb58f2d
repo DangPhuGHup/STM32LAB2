@@ -38,42 +38,42 @@ void updateLEDMatrix(int index)
 	    case 0:
 	    	        HAL_GPIO_WritePin(GPIOB, ROW0_Pin, RESET);
 	    	        display(matrix_buffer[0]);
-	    	        matrix_buffer[index] = (matrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
+	    	        matrix_buffer[index] = (maxtrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
 	    	        break;
 	    case 1:
 	    	    	HAL_GPIO_WritePin(GPIOB, ROW1_Pin, RESET);
 	    	    	display(matrix_buffer[1]);
-	    	    	matrix_buffer[index] = (matrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
+	    	    	matrix_buffer[index] = (maxtrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
 	    	    	break;
 	    case 2:
 	    	    	HAL_GPIO_WritePin(GPIOB, ROW2_Pin, RESET);
 	    	    	display(matrix_buffer[2]);
-	    	    	matrix_buffer[index] = (matrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
+	    	    	matrix_buffer[index] = (maxtrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
 	    	    	break;
 	    case 3:
 	    	    	HAL_GPIO_WritePin(GPIOB, ROW3_Pin, RESET);
 	    	    	display(matrix_buffer[3]);
-	    	    	matrix_buffer[index] = (matrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
+	    	    	matrix_buffer[index] = (maxtrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
 	    	    	break;
 	    case 4:
 	    	    	HAL_GPIO_WritePin(GPIOB, ROW4_Pin, RESET);
 	    	    	display(matrix_buffer[4]);
-	    	    	matrix_buffer[index] = (matrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
+	    	    	matrix_buffer[index] = (maxtrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
 	    	    	break;
 	    case 5:
 	    	    	HAL_GPIO_WritePin(GPIOB, ROW5_Pin, RESET);
 	    	    	display(matrix_buffer[5]);
-	    	    	matrix_buffer[index] = (matrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
+	    	    	matrix_buffer[index] = (maxtrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
 	    	    	break;
 	    case 6:
 	    	    	HAL_GPIO_WritePin(GPIOB, ROW6_Pin, RESET);
 	    	    	display(matrix_buffer[6]);
-	    	    	matrix_buffer[index] = (matrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
+	    	    	matrix_buffer[index] = (maxtrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
 	    	    	break;
 	    case 7:
 	    	    	HAL_GPIO_WritePin(GPIOB, ROW7_Pin, RESET);
 	    	    	display(matrix_buffer[7]);
-	    	    	matrix_buffer[index] = (matrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
+	    	    	matrix_buffer[index] = (maxtrix_buffer[index] << 1) | (matrix_buffer[index] >> 7);
 	    	    	break;
 
 	    default:
