@@ -16,6 +16,7 @@ extern int timer5_flag; // chu ky 1.5s cho 2 SEG7 thu ba
 extern int timer6_flag; // chu ky 1.5s cho 2 SEG7 thu tu
 extern int timerDOT_flag; // timer cho 2 led o giua
 extern int updateSEG7_flag; // timer cho ham update SEG7
+extern int timer_display_flag; // timer cho 0.25s moi SEG7
 
 void setTimer1(int duration);
 void setTimer2(int duartion);
@@ -25,6 +26,7 @@ void setTimer5(int duration);
 void setTimer6(int duration);
 void setTimerDOT(int duartion);
 void setTimerUpdateSEG7(int duration);
+void setTimer_display(int duration);
 
 void timerRun();
 

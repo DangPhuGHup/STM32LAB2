@@ -102,7 +102,6 @@ int main(void)
 //  setTimer5(150);
 //  setTimer6(150);
   setTimerDOT(100);
-  setTimerUpdateSEG7(100);
   int index = 0;
 
   int hour = 15, minute = 9, second = 50;
@@ -153,7 +152,7 @@ int main(void)
       if(updateSEG7_flag == 1)
       {
     	  setTimerUpdateSEG7(100);
-    	  second++;
+
     	  	  if (second >= 60){
     	  		  second = 0;
     	  		  minute++;
@@ -166,11 +165,16 @@ int main(void)
     	  		  hour = 0;
     	  	  }
     	  	 updateClockBuffer();
+    	  	 second++;
+      }
+      if(timer_display_flag == 1)
+      {
+    	  setTimer_display(25);
     	  update7SEG(index++);
     	  if(index >= 4)
     	  {
-    		  index = 0;
-    	  }
+    	      index = 0;
+    	   }
       }
 
 
